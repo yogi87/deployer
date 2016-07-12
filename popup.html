@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body { 
+                min-width: 420px; 
+                overflow-x: hidden; 
+                font-family: Arial, sans-serif; 
+                font-size: 15px; 
+            }
+            input, textarea { 
+                width: 420px; 
+            }
+            input#save { 
+                font-weight: bold; width: auto; 
+            }
+
+            body {
+                background-color: #f2f2f2;
+            }
+
+            #save {
+            background-color: #0a9dc2;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        </style>
+        <script src="popup.js"></script>
+    </head>
+    <body>
+        <form id="add_deployment">
+            <p><b><label for="appId">App ID</label></b><br />
+            <input type="text" id="appId" name="appId" size="50" value="" placeholder= "App ID" /></p>
+
+            <p><b><label for="apiKey">API Key</label></b><br />
+            <input type="text" id="apiKey" name="apiKey" size="50" value="" placeholder= "API Key"></p>
+
+            <p><b><label for="revision">Revision</label></b><br />
+            <input type="text" id="revision" name="revision" size="50" value="" placeholder= "Revision"/></p>
+
+            <p><b><label for="changelog">Changelog</label></b><br />
+            <textarea id="changelog" name="changelog" rows="6" cols="35" placeholder= "Added: /v2/deployments.rb, Removed: None"></textarea></p>
+
+            <p><b><label for="description">Description</label></b><br />
+            <textarea id="description" name="description" rows="6" cols="35" placeholder= "Added a deployments resource to the v2 API"></textarea></p>
+
+            <p><b><label for="user">User</label></b><br />
+            <input type="text" id="user" name="user" size="50" value="" placeholder= "datanerd@nerdlife.com"/></p>
+            <p>
+                <input id="save" type="submit" value="Deploy!" />
+                <span id="status-display"></span>
+            </p>
+        </form>
+    </body>
+</html>
